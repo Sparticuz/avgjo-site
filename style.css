@@ -1,0 +1,144 @@
+/*   
+Theme Name: BLANK WP Theme
+Theme URI: http://www.kmcnally.net
+Description: This is just a BLANK starter WordPress Theme template -- WordPress v3
+Author: Kyle McNally
+Author URI: http://www.kmcnally.net
+Version: 0
+*/
+
+@import url('css/framework.css');
+
+#container { 
+	width: 960px; 
+	margin: 20px auto;
+	border: 1px solid black;
+}
+
+#header {
+	border: 1px solid red;
+}
+#menu {
+	border: 1px solid blue;
+}
+#content {
+	border: 1px solid green;
+	width: 740px;
+	float:left;
+}
+#sidebar{
+	border: 1px solid yellow;
+	float:left;
+	width: 216px;
+}
+#footer {
+	clear:both;
+	
+	border: 1px solid orange;
+}
+
+.screen-reader-text { position: absolute; left: -9999px; top: -9999px; }
+.clear { clear: both; }
+* html .group, *:first-child+html .group { zoom: 1; } /* First selector = IE6, Second Selector = IE 7 */
+
+
+a { }
+a:hover { } 
+
+blockquote { }
+blockquote p { }
+
+.post { }
+
+.entry { }
+.entry a { }
+.entry a:hover { }
+
+pre { }
+code, tt { }
+
+#meta { }
+.postmetadata { }
+
+#sidebar { }
+
+.navgation { }
+   .next-posts { }
+   .prev-posts { }
+
+#searchform { }
+	#s { }
+	#searchsubmt { }
+	
+ol.commentlist { list-style: none; }
+ol.commentlist li { }
+ol.commentlist li.alt { }
+ol.commentlist li.bypostauthor { }
+ol.commentlist li.byuser { }
+ol.commentlist li.comment-author-admin { }
+ol.commentlist li.comment { border-bottom: 1px dotted #666; padding: 10px; }
+ol.commentlist li.comment div.comment-author { }
+ol.commentlist li.comment div.vcard { }
+ol.commentlist li.comment div.vcard cite.fn { font-style: normal; }
+ol.commentlist li.comment div.vcard cite.fn a.url { }
+ol.commentlist li.comment div.vcard img.avatar { float:right; margin: 0 0 10px 10px; }
+ol.commentlist li.comment div.vcard img.avatar-32 { }
+ol.commentlist li.comment div.vcard img.photo { }
+ol.commentlist li.comment div.vcard span.says { }
+ol.commentlist li.comment div.commentmetadata { }
+ol.commentlist li.comment div.comment-meta { font-size: 10px; }
+ol.commentlist li.comment div.comment-meta a { color: #ccc; }
+ol.commentlist li.comment p { }
+ol.commentlist li.comment ul { }
+ol.commentlist li.comment div.reply { font-size: 11px; }
+ol.commentlist li.comment div.reply a { font-weight: bold; }
+ol.commentlist li.comment ul.children { list-style: none; margin: 10px 0 0; }
+ol.commentlist li.comment ul.children li { }
+ol.commentlist li.comment ul.children li.alt { }
+ol.commentlist li.comment ul.children li.bypostauthor { }
+ol.commentlist li.comment ul.children li.byuser { }
+ol.commentlist li.comment ul.children li.comment { }
+ol.commentlist li.comment ul.children li.comment-author-admin { }
+ol.commentlist li.comment ul.children li.depth-2 { border-left: 5px solid #555; margin: 0 0 10px 10px; }
+ol.commentlist li.comment ul.children li.depth-3 { border-left: 5px solid #999; margin: 0 0 10px 10px; }
+ol.commentlist li.comment ul.children li.depth-4 { border-left: 5px solid #bbb; margin: 0 0 10px 10px; }
+ol.commentlist li.comment ul.children li.depth-5 { }
+ol.commentlist li.comment ul.children li.odd { }
+ol.commentlist li.even { background: #fff; }
+ol.commentlist li.odd { background: #f6f6f6; }
+ol.commentlist li.parent { border-left: 5px solid #111; }
+ol.commentlist li.thread-alt { }
+ol.commentlist li.thread-even { }
+ol.commentlist li.thread-odd { }
+
+
+
+/* Misc classes
+-------------------------------------------------------------- */
+.small      { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
+.large      { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
+.hide       { display: none; }
+
+.quiet      { color: #666; }
+.loud       { color: #000; }
+.highlight  { background:#ff0; }
+.added      { background:#060; color: #fff; }
+.removed    { background:#900; color: #fff; }
+
+.first      { margin-left:0; padding-left:0; }
+.last       { margin-right:0; padding-right:0; }
+.top        { margin-top:0; padding-top:0; }
+.bottom     { margin-bottom:0; padding-bottom:0; }
+
+/* Success, notice and error boxes
+-------------------------------------------------------------- */
+.error,
+.notice,
+.success    { padding: .8em; margin-bottom: 1em; border: 2px solid #ddd; }
+
+.error      { background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
+.notice     { background: #FFF6BF; color: #514721; border-color: #FFD324; }
+.success    { background: #E6EFC2; color: #264409; border-color: #C6D880; }
+.error a    { color: #8a1f11; }
+.notice a   { color: #514721; }
+.success a  { color: #264409; }
