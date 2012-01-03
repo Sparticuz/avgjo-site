@@ -1,18 +1,13 @@
-/*   
-Theme Name: BLANK WP Theme
+/*
+Theme Name: Average Jo WP Theme
 Theme URI: http://www.kmcnally.net
-Description: This is just a BLANK starter WordPress Theme template -- WordPress v3
+Description: This is the WP theme for Average Jo Magazine
 Author: Kyle McNally
 Author URI: http://www.kmcnally.net
 Version: 0
 */
 
-@import url('css/framework.css');
-
-#container { 
-	width: 960px; 
-	margin: 20px auto;
-	border: 1px solid black;
+#container {
 }
 
 #header {
@@ -23,27 +18,17 @@ Version: 0
 }
 #content {
 	border: 1px solid green;
-	width: 740px;
-	float:left;
-}
+	}
 #sidebar{
 	border: 1px solid yellow;
-	float:left;
-	width: 216px;
-}
+	}
 #footer {
-	clear:both;
 	
 	border: 1px solid orange;
 }
 
-.screen-reader-text { position: absolute; left: -9999px; top: -9999px; }
-.clear { clear: both; }
-* html .group, *:first-child+html .group { zoom: 1; } /* First selector = IE6, Second Selector = IE 7 */
-
-
 a { }
-a:hover { } 
+a:hover { }
 
 blockquote { }
 blockquote p { }
@@ -69,7 +54,7 @@ code, tt { }
 #searchform { }
 	#s { }
 	#searchsubmt { }
-	
+
 ol.commentlist { list-style: none; }
 ol.commentlist li { }
 ol.commentlist li.alt { }

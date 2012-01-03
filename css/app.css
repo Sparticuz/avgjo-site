@@ -1,0 +1,44 @@
+/* Foundation v2.1.4 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
+
+/* --------------------------------------------------
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+.row.display { background: #f4f4f4; margin-bottom: 10px; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; }
+.row.display .column, .row.display .columns { background: #e7e7e7; font-size: 11px; text-indent: 3px; padding-top: 6px; padding-bottom: 6px; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; }
+
+/* Override foundation menu */
+.nav-bar{ margin-top: 0; }
+
+/* PUT IN YOUR SLIDER ID AND SIZE TO MAKE LOAD BEAUTIFULLY
+   ================================================== */
+#featured-stories {
+	width: 472px;
+	height: 250px;
+	background: #000 url('../images/orbit/loading.gif') no-repeat center center;
+	overflow: hidden; }
+#featured-stories>img,
+#featured-stories>div,
+#featured-stories>a { display: none; }
+
+
+/* -----------------------------------------
+   Index
+----------------------------------------- */
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+

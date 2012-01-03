@@ -1,5 +1,4 @@
-<div id="menu">
-	<?php
+<?php
 	/* Our navigation menu.
 	 * If one isn't filled out, wp_nav_menu falls back to wp_page_menu.
 	 * The menu assiged to the primary position is the one used.
@@ -7,10 +6,23 @@
 	 */
 
 	$args = array(
-		//'depth' => 1,
-		'link_before' => '<span>',
-		'link_after' => '</span>'
+		'theme_location'  => 'main-menu',
+		//'menu'            => ,
+		'container'       => 'nav',
+		//'container_class' => 'menu-{menu slug}-container',
+		//'container_id'    => ,
+		'menu_class'      => 'nav-bar',
+		//'menu_id'         => ,
+		//'echo'            => true,
+		//'fallback_cb'     => 'wp_page_menu',
+		//'before'          => ,
+		//'after'           => ,
+		//'link_before'     => ,
+		//'link_after'      => ,
+		//'items_wrap'      => '<ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>',
+		//'depth'           => 0,
+		//'walker'          =>
 	);
-
-	wp_nav_menu( $args ); ?>
-</div>
+	
+	wp_nav_menu( $args );
+?>
