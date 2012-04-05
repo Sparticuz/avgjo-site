@@ -24,11 +24,14 @@
 	if ( !is_admin() ) {
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"), false);
-		wp_register_script('jquery-orbit', (get_stylesheet_directory_uri()."/js/jquery.orbit-1.2.3.min.js"), false);
-		wp_register_script('foundation', (get_stylesheet_directory_uri()."/js/foundation.js"), false);
+		wp_register_script('foundation', (get_stylesheet_directory_uri()."/javascripts/foundation.js"), false);
+		wp_register_script('app', (get_stylesheet_directory_uri()."/javascripts/app.js"), false);
+		wp_register_script('modernizr', (get_stylesheet_directory_uri()."/javascripts/modernizr.foundation.js"), false);
 		wp_enqueue_script('jquery');
-		wp_enqueue_script('jquery-orbit');
+		wp_enqueue_script('modernizr');
 		wp_enqueue_script('foundation');
+		wp_enqueue_script('app');
+
 	}
 
 	// Clean up the <head>

@@ -38,10 +38,10 @@
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<!-- Other Included CSS Files -->
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/foundation.css" />
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/app.css" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/stylesheets/foundation.css" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/stylesheets/app.css" />
 	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/ie.css" />
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/stylesheets/ie.css" />
 	<![endif]-->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 
@@ -60,8 +60,8 @@
 			<div class="twelve columns">
 				<?php include (TEMPLATEPATH . '/inc/menu.php' ); ?>
 				<div class="row">
-					<div class="four columns">
-						<img src="http://placekitten.com/g/100/50?p=<?php echo rand(); ?>"/>
+					<div class="four columns" style="text-align: center;">
+						<img src="http://placekitten.com/g/101/101?p=<?php echo rand(); ?>"/>
 					</div>
 					<hgroup class="four columns">
 						<h1 style="text-align:center;"><a href="<?php echo site_url(); ?>/"><img src="<?php bloginfo('template_directory'); ?>/images/header.png" alt="<?php bloginfo('name'); ?>" /></a></h1>

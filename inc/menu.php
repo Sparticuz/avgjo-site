@@ -9,7 +9,7 @@
 		'theme_location'  => 'main-menu',
 		//'menu'            => ,
 		'container'       => 'nav',
-		//'container_class' => 'menu-{menu slug}-container',
+		'container_class' => 'row',
 		//'container_id'    => ,
 		'menu_class'      => 'nav-bar',
 		//'menu_id'         => ,
@@ -23,6 +23,6 @@
 		//'depth'           => 0,
 		//'walker'          =>
 	);
-	
+
 	wp_nav_menu( $args );
 ?>
