@@ -16,11 +16,30 @@
 
 /* Override foundation menu */
 .nav-bar{ margin-top: 0; }
-
+body{font: Helvetica, Sans-Serif;}
+h2{font: Oxygen sans-serif;}
 /* PUT IN YOUR SLIDER ID AND SIZE TO MAKE LOAD BEAUTIFULLY
    ================================================== */
 .post { overflow: hidden; }
 .panel { border: 1px solid black; }
+
+.featured-hero-image{
+	position:relative;
+}
+.featured-hero-image h2{
+	position:absolute;
+	top: 175px;
+	left:0;
+	width: 100%;
+}
+
+.featured-hero-image h2 span{
+	color:white;
+	font: bold 24/45px Helvetica, Sans-Serif;
+	letter-spacing:-1px;
+	background: rgba(0,0,0,0.7);
+	padding: 10px;
+}
 
 /* -----------------------------------------
    Index

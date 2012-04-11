@@ -1,29 +1,35 @@
 <?php get_header(); ?>
-<div id="content">
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			
-		<div class="post" id="post-<?php the_ID(); ?>">
+<div id="content" class="row">
+	<div class="twelve columns">
+		<div class="row">
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<h2><?php the_title(); ?></h2>
+				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+					<h2><?php the_title(); ?></h2>
 
-			<div class="entry">
+					<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 
-				<?php the_content(); ?>
+					<div class="entry">
 
-				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
+						<?php the_content(); ?>
 
-			</div>
+						<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 
-			<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
+						<?php the_tags( 'Tags: ', ', ', ''); ?>
 
+					</div>
+
+					<?php edit_post_link('Edit this entry','','.'); ?>
+
+				</div>
+
+			<?php comments_template(); ?>
+
+			<?php endwhile; endif; ?>
 		</div>
-		
-		<?php comments_template(); ?>
-
-		<?php endwhile; endif; ?>
+	</div>
 </div>
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 
 <?php get_footer(); ?>

@@ -54,4 +54,19 @@
     	));
     }
 
+	//Replace wordpress comment count with fb comment count
+	function get_fb_comment_count(){
+		global $post;
+		$url = get_permalink($post->ID);
+		
+		$ch = curl_init('https://graph.facebook.com/?ids='.$url);
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+		$response = curl_exec($ch);
+		$json = json_decode($response);
+		curl_close($ch);
+		return $json->$url->comments;
+	}
+	//add_filter('get_comments_number','get_fb_comment_count');
+	
 ?>

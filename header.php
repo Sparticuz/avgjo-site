@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
@@ -31,7 +31,8 @@
 	<meta name="description" content="Average Jo Magazine Website!" />
 	<meta name="author" content="Apollo Projects" />
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<meta property="fb:app_id" content="249178715160402" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
@@ -39,12 +40,13 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<!-- Other Included CSS Files -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/stylesheets/foundation.css" />
+	<link href="http://fonts.googleapis.com/css?family=Oxygen|Gorditas" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/stylesheets/app.css" />
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/stylesheets/ie.css" />
 	<![endif]-->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
-
+	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
@@ -52,7 +54,14 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=249178715160402";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="container">
 
 		<!-- Header Row -->

@@ -30,7 +30,13 @@
 							while (have_posts()) {
 								the_post();
 								if (has_post_thumbnail()) { ?>
-									<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+									<div class="featured-hero-image six columns">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail(); ?>
+											<h2><span><?php the_title(); ?></span></h2>
+										</a>
+									</div>
+									
 				<?php			}
 							}
 						}
@@ -48,14 +54,15 @@
 								<h2 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 								<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 							</header>
-							<!--<article class="entry">
-								<?php the_content(); ?>
-							</article>-->
-							<footer class="postmetadata">
+							<article class="entry">
+								<div class="image"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
+								<?php the_content("Continue reading " . the_title('', '', false)); ?>
+							</article>
+							<!--<footer class="postmetadata">
 								<?php the_tags('Tags: ', ', ', '<br />'); ?>
 								Posted in <?php the_category(', ') ?> |
 								<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
-							</footer>
+							</footer>-->
 						</div>
 					</li>
 
