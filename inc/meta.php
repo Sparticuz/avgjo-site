@@ -1,5 +1,5 @@
 <?php //Meta for posts ?>
-<div class="meta">
-	<strong><?php echo get_the_author();  ?></strong> |
-	<em><?php the_time('F jS, Y') ?></em>
+<div class="meta" style="margin-bottom:2px;">
+	<span class="blue radius label" style="margin-bottom:2px;"><strong><?php the_author_posts_link(); ?></strong> |
+	<em><?php the_time('F jS, Y') ?></em></span>
 </div>

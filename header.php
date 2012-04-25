@@ -65,7 +65,7 @@
 	<div id="container">
 
 		<!-- Header Row -->
-		<header class="row" id="header">
+		<header class="row shadow" id="header">
 			<div class="twelve columns">
 				<?php include (TEMPLATEPATH . '/inc/menu.php' ); ?>
 				<div class="row">

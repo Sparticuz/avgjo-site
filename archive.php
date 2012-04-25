@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-<div id="content">
+<div id="content" class="row shadow">
+	<div class="twelve columns">
+		<div class="post panel">
 	<?php if (have_posts()) : ?>
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 		<?php /* If this is a category archive */ if (is_category()) { ?>
@@ -19,25 +21,36 @@
 		<?php } ?>
 
 		<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
-
-		<?php while (have_posts()) : the_post(); ?>
-			<div <?php post_class() ?>>
-				<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-				<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
-				<div class="entry">
-					<?php the_content(); ?>
-				</div>
-
-			</div>
-
-		<?php endwhile; ?>
-
-		<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 			
-	<?php else : ?>
-		<h2>Nothing found</h2>
-	<?php endif; ?>
+		<?php while (have_posts()) : the_post(); ?>
+			<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+				<div class="panel">
+					<header>
+						<h2 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+						<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+					</header>
+					<article class="entry">
+						<div class="image"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
+						<?php the_content("Continue reading " . the_title('', '', false)); ?>
+					</article>
+					<!--<footer class="postmetadata">
+						<?php the_tags('Tags: ', ', ', '<br />'); ?>
+						Posted in <?php the_category(', ') ?> |
+						<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
+					</footer>-->
+				</div>
+			</li>
+
+			<?php endwhile; ?>
+
+			<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
+
+			<?php else : ?>
+				<h2>Not Found</h2>
+			<?php endif; ?>
+		</div>
+	</div>
 </div>
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 
 <?php get_footer(); ?>

@@ -20,8 +20,8 @@ body{font: Helvetica, Sans-Serif;}
 h2{font: Oxygen sans-serif;}
 /* PUT IN YOUR SLIDER ID AND SIZE TO MAKE LOAD BEAUTIFULLY
    ================================================== */
-.post { overflow: hidden; }
-.panel { border: 1px solid black; }
+.post { overflow: hidden; box-shadow: 0 0 0 !important; border: 0 !important; background: none !important;}
+.panel { border: 1px solid #dddddd; }
 
 .featured-hero-image{
 	position:relative;
@@ -32,7 +32,7 @@ h2{font: Oxygen sans-serif;}
 	left:0;
 	width: 100%;
 }
-
+.shadow{box-shadow:0 1px 2px rgba(34, 25, 25, 0.4);}
 .featured-hero-image h2 span{
 	color:white;
 	font: bold 24/45px Helvetica, Sans-Serif;

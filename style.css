@@ -7,26 +7,37 @@ Author URI: http://www.kmcnally.net
 Version: 0
 */
 
+body{
+	background-color: #f9c6dc;
+}
+.column, .columns {
+	background-color: #ffffff;
+}
 #container {
 }
 
 #header {
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 }
 #menu {
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 }
 #content {
-	border: 1px solid green;
+	/*border: 1px solid green;*/
 	}
 #sidebar{
-	border: 1px solid yellow;
+	/*border: 1px solid yellow;*/
 	}
 #footer {
 	
-	border: 1px solid orange;
+	/*border: 1px solid orange;*/
 }
+.meta a {color: white;}
+.meta a:hover {color: white;}
+.post{}
 
+
+/*Things that are for wordpress */
 a { }
 a:hover { }
 
@@ -121,7 +132,7 @@ ol.commentlist li.thread-odd { }
 .notice,
 .success    { padding: .8em; margin-bottom: 1em; border: 2px solid #ddd; }
 
-.error      { background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
+.error      { background: #FBE3E4 !important; color: #8a1f11 !important; border-color: #FBC2C4 !important; text-shadow: 0 -1px rgba(251, 227, 228, 0.3) !important; }
 .notice     { background: #FFF6BF; color: #514721; border-color: #FFD324; }
 .success    { background: #E6EFC2; color: #264409; border-color: #C6D880; }
 .error a    { color: #8a1f11; }

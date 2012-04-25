@@ -14,10 +14,11 @@
 ?>
 
 <?php get_header(); ?>
-<div id="content" class="row">
+<div id="content" class="row shadow">
 	<div class="twelve columns">
 		<div class="row">
 			<div id="featured-stories" class="twelve columns">
+				<div class="row" style="padding-left: 1%;">
 				<?php
 				//Let's show the stickies
 				/* Get all Sticky Posts */
@@ -30,7 +31,7 @@
 							while (have_posts()) {
 								the_post();
 								if (has_post_thumbnail()) { ?>
-									<div class="featured-hero-image six columns">
+									<div class="featured-hero-image six columns" style="margin:0 auto;float:left;width:480px !important;">
 										<a href="<?php the_permalink(); ?>">
 											<?php the_post_thumbnail(); ?>
 											<h2><span><?php the_title(); ?></span></h2>
@@ -41,6 +42,7 @@
 							}
 						}
 				?>
+				</div>
 			</div>
 		</div>
 		<div class="row">

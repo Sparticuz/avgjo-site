@@ -4,23 +4,23 @@ header($_SERVER["SERVER_PROTOCOL"], true, 404);
 
 get_header(); ?>
 	<!-- Row for main content area -->
-		<div id="content" class="eight columns" role="main">
-	
-			<div class="post-box">
-				<h1>Page not found</h1>
-				<div class="error">
-					<p class="bottom">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+		<div id="content" class="row shadow" role="main">
+			<div class="twelve columns">
+				<div class="post panel">
+					<h1>Page not found</h1>
+					<div class="alert-box error">
+						<p class="bottom">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+					</div>
+					<p>Please try the following:</p>
+					<ul> 
+						<li>Check your spelling</li>
+						<li>Return to the <a href="<?php home_url(); ?>">home page</a></li>
+						<li>Click the <a href="javascript:history.back()">Back</a> button</li>
+					</ul>
 				</div>
-				<p><?php _e('Please try the following:', 'reverie'); ?></p>
-				<ul> 
-					<li><?php _e('Check your spelling', 'reverie'); ?></li>
-					<li><?php printf(__('Return to the <a href="%s">home page</a>', 'reverie'), home_url()); ?></li>
-					<li><?php _e('Click the <a href="javascript:history.back()">Back</a> button', 'reverie'); ?></li>
-				</ul>
 			</div>
-
 		</div><!-- End Content row -->
 		
-		<?php get_sidebar(); ?>
+		<?php //get_sidebar(); ?>
 		
 <?php get_footer(); ?>
