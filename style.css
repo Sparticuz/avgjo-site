@@ -45,6 +45,8 @@ blockquote { }
 blockquote p { }
 
 .post { }
+.post p { line-height: 1.5; 
+		 font-size: 1.5rem;}
 
 .entry { }
 .entry a { }

@@ -70,7 +70,7 @@
 				<?php include (TEMPLATEPATH . '/inc/menu.php' ); ?>
 				<div class="row">
 					<div class="four columns" style="text-align: center;">
-						<img src="http://placekitten.com/g/101/101?p=<?php echo rand(); ?>"/>
+						<div class="ad"><img src="http://placekitten.com/g/101/101?p=<?php echo rand(); ?>"/></div>
 					</div>
 					<hgroup class="four columns">
 						<h1 style="text-align:center;"><a href="<?php echo site_url(); ?>/"><img src="<?php bloginfo('template_directory'); ?>/images/header.png" alt="<?php bloginfo('name'); ?>" /></a></h1>
