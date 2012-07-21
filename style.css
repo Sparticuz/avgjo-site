@@ -13,6 +13,9 @@ body{
 .column, .columns {
 	background-color: #ffffff;
 }
+.nav-bar .column, .nav-bar .columns{
+	background-color: inherit;
+}
 #container {
 }
 

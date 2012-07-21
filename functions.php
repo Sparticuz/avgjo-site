@@ -4,7 +4,8 @@
 	if (function_exists('add_theme_support')){
 		add_theme_support('menus');
 		add_theme_support('post-thumbnails');
-		set_post_thumbnail_size( 480, 270 );
+		//this is the size of the two hero images on index
+		set_post_thumbnail_size( 500, 281 );
 		add_theme_support('automatic-feed-links');
 	}
 
@@ -25,12 +26,14 @@
 	if ( !is_admin() ) {
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"), false);
-		wp_register_script('foundation', (get_stylesheet_directory_uri()."/javascripts/foundation.js"), false);
-		wp_register_script('app', (get_stylesheet_directory_uri()."/javascripts/app.js"), false);
+		wp_register_script('masonry', (get_stylesheet_directory_uri()."/javascripts/jquery.masonry.js"), false);
+		wp_register_script('placeholder', (get_stylesheet_directory_uri()."/javascripts/jquery.placeholder.min.js"), false);
 		wp_register_script('modernizr', (get_stylesheet_directory_uri()."/javascripts/modernizr.foundation.js"), false);
+		wp_register_script('app', (get_stylesheet_directory_uri()."/javascripts/app.js"), false);
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('modernizr');
-		wp_enqueue_script('foundation');
+		wp_enqueue_script('placeholder');
+		wp_enqueue_script('masonry');
 		wp_enqueue_script('app');
 
 	}
@@ -45,9 +48,9 @@
 
     if (function_exists('register_sidebar')) {
     	register_sidebar(array(
-    		'name' => 'Sidebar Widgets',
-    		'id'   => 'sidebar-widgets',
-    		'description'   => 'These are widgets for the sidebar.',
+    		'name' => 'Footer',
+    		'id'   => 'footer-widgets',
+    		'description'   => 'These are widgets for the footer.',
     		'before_widget' => '<div id="%1$s" class="panel widget %2$s">',
     		'after_widget'  => '</div>',
     		'before_title'  => '<h3>',

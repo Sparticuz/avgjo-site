@@ -63,14 +63,12 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 	<div id="container">
-
-		<!-- Header Row -->
 		<header class="row shadow" id="header">
 			<div class="twelve columns">
 				<?php include (TEMPLATEPATH . '/inc/menu.php' ); ?>
 				<div class="row">
 					<div class="four columns" style="text-align: center;">
-						<div class="ad"><img src="http://placekitten.com/g/101/101?p=<?php echo rand(); ?>"/></div>
+						<div class="ad"><img src="http://placedog.com/g/101/101?p=<?php echo rand(); ?>"/></div>
 					</div>
 					<hgroup class="four columns">
 						<h1 style="text-align:center;"><a href="<?php echo site_url(); ?>/"><img src="<?php bloginfo('template_directory'); ?>/images/header.png" alt="<?php bloginfo('name'); ?>" /></a></h1>
