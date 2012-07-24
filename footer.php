@@ -53,6 +53,7 @@
 			</div>
 		</footer>
 	</div>
+	<?php include (TEMPLATEPATH . '/inc/analytics.php' ); ?>
 	<?php wp_footer(); ?>
 </body>
 </html>
