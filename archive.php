@@ -21,7 +21,7 @@
 		<?php } ?>
 
 		<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
-			
+			<ul>	
 		<?php while (have_posts()) : the_post(); ?>
 			<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 				<div class="panel">
@@ -42,7 +42,7 @@
 			</li>
 
 			<?php endwhile; ?>
-
+			</ul>
 			<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 
 			<?php else : ?>

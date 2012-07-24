@@ -46,18 +46,6 @@
     add_action('init', 'removeHeadLinks');
     remove_action('wp_head', 'wp_generator');
 
-    if (function_exists('register_sidebar')) {
-    	register_sidebar(array(
-    		'name' => 'Footer',
-    		'id'   => 'footer-widgets',
-    		'description'   => 'These are widgets for the footer.',
-    		'before_widget' => '<div id="%1$s" class="panel widget %2$s">',
-    		'after_widget'  => '</div>',
-    		'before_title'  => '<h3>',
-    		'after_title'   => '</h3>'
-    	));
-    }
-
 	//Replace wordpress comment count with fb comment count
 	function get_fb_comment_count(){
 		global $post;

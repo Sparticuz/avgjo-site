@@ -22,8 +22,8 @@
 		<div class="row" id="posts">
 			<div class="twelve columns">
 				<ul class="block-grid mobile three-up" id="all-posts">
-				<?php query_posts( array( 'post__not_in' => get_option( 'sticky_posts' ) ) ); ?>
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php //query_posts( array( 'post__not_in' => get_option( 'sticky_posts' ) ) ); ?>
+				<?php if (have_posts()) : while (have_posts()) : the_post(); if(is_sticky()) continue; ?>
 					<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 						<div class="panel">
 							<header class="overflow">

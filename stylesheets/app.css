@@ -16,12 +16,19 @@
 
 /* Override foundation menu */
 .nav-bar{ margin-top: 0; }
-/*.sub-menu{display:none;}*/
 body{font: Helvetica, Sans-Serif;}
 h2{font: Oxygen sans-serif;}
-/* PUT IN YOUR SLIDER ID AND SIZE TO MAKE LOAD BEAUTIFULLY
-   ================================================== */
-.post { overflow: hidden; box-shadow: 0 0 0 !important; border: 0 !important; background: none !important;}
+
+.post { 
+	overflow: hidden; 
+	box-shadow: 0 0 0 !important; 
+	border: 0 !important; 
+	background: none !important;
+}
+.archive .post {
+	margin-bottom: 10px;
+}
+
 .panel {  border: 1px solid #dddddd; }
 
 .featured-hero-image{

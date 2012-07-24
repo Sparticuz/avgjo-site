@@ -19,8 +19,5 @@ get_header(); ?>
 					</ul>
 				</div>
 			</div>
-		</div><!-- End Content row -->
-		
-		<?php //get_sidebar(); ?>
-		
+		</div>
 <?php get_footer(); ?>

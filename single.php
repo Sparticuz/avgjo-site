@@ -21,7 +21,7 @@
 						$content = explode("</p>", $content);
 						for ($i = 0; $i <count($content); $i++ ) {
 							if ($i == $paragraphAfter) { ?>
-								<div class="ad"><img src="http://placekitten.com/g/400/100" /></div>
+								<div class="ad" style="margin:0 auto;"><img src="http://placedog.com/g/400/100" /></div>
 							<?php }
 							echo $content[$i] . "</p>";
 						} 
@@ -30,7 +30,10 @@
 						
 						<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 
-						<?php the_tags( 'Tags: ', ', ', ''); ?>
+						<?php the_tags( 'Tags: ', ', ', '');
+							  echo "<br />Categories: ";
+							  the_category( ', ');
+						?>
 
 					</div>
 
