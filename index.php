@@ -27,7 +27,7 @@
 					<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 						<div class="panel">
 							<header class="overflow">
-								<h2 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+								<h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 								<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 							</header>
 							<article class="entry overflow">

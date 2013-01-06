@@ -33,9 +33,10 @@
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
 	<meta name="viewport" content="width=device-width,initial-scale=1"/>
 	<meta property="fb:app_id" content="249178715160402" />
+	<meta property="fb:admins" content="kylemcnally"/>
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
+<link href='http://fonts.googleapis.com/css?family=Marcellus' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<!-- Other Included CSS Files -->
@@ -46,7 +47,7 @@
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/stylesheets/ie.css" />
 	<![endif]-->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
-	
+
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>

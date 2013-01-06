@@ -25,7 +25,7 @@
 	// Load jQuery from Google
 	if ( !is_admin() ) {
 		wp_deregister_script('jquery');
-		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"), false);
+		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"), false);
 		wp_register_script('masonry', (get_stylesheet_directory_uri()."/javascripts/jquery.masonry.js"), false);
 		wp_register_script('placeholder', (get_stylesheet_directory_uri()."/javascripts/jquery.placeholder.min.js"), false);
 		wp_register_script('modernizr', (get_stylesheet_directory_uri()."/javascripts/modernizr.foundation.js"), false);
@@ -50,7 +50,7 @@
 	function get_fb_comment_count(){
 		global $post;
 		$url = get_permalink($post->ID);
-		
+
 		$ch = curl_init('https://graph.facebook.com/?ids='.$url);
 		curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
@@ -60,5 +60,5 @@
 		return $json->$url->comments;
 	}
 	//add_filter('get_comments_number','get_fb_comment_count');
-	
+
 ?>
