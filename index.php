@@ -16,8 +16,10 @@
 <?php get_header(); ?>
 <div id="content" class="row shadow">
 	<div class="twelve columns">
+		<div style="width:500px;height:281px;">
 		<div class="row" id="hero-stories">
 			<?php include (TEMPLATEPATH . '/inc/hero.php' ); ?>
+		</div>
 		</div>
 		<div class="row" id="posts">
 			<div class="twelve columns">

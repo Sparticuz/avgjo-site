@@ -5,7 +5,7 @@ if (have_posts()) {
 	while (have_posts()) {
 		the_post();
 		if (has_post_thumbnail()) { ?>
-			<div class="featured-hero-image six columns" style="padding-right:0;">
+			<div class="featured-hero-image" style="padding-right:0;">
 				<a href="<?php the_permalink(); ?>">
 					<?php the_post_thumbnail(); ?>
 					<h2><span><?php the_title(); ?></span></h2>

@@ -33,10 +33,9 @@
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
 	<meta name="viewport" content="width=device-width,initial-scale=1"/>
 	<meta property="fb:app_id" content="249178715160402" />
-	<meta property="fb:admins" content="kylemcnally"/>
+	<meta property="fb:admins" content="kylemcnally" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-<link href='http://fonts.googleapis.com/css?family=Marcellus' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<!-- Other Included CSS Files -->
@@ -69,7 +68,7 @@
 				<?php include (TEMPLATEPATH . '/inc/menu.php' ); ?>
 				<div class="row">
 					<div class="four columns" style="text-align: center;">
-						<div class="ad"><img src="http://placedog.com/g/101/101?p=<?php echo rand(); ?>"/></div>
+						<!--<div class="ad"><img src="http://placedog.com/g/101/101?p=<?php echo rand(); ?>"/></div>-->
 					</div>
 					<hgroup class="four columns">
 						<h1 style="text-align:center;"><a href="<?php echo site_url(); ?>/"><img src="<?php bloginfo('template_directory'); ?>/images/header.png" alt="<?php bloginfo('name'); ?>" /></a></h1>

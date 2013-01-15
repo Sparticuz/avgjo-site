@@ -48,11 +48,6 @@ jQuery(document).ready(function ($) {
 	/*$('.button.disabled').on('click.fndtn', function (event) {
 		event.preventDefault();
 	});*/
-	
-	$('#all-posts').masonry({
-		// options
-		itemSelector : '.post'
-	});
 
 //	$('.block-grid.three-up>li').css({'margin-left':'1%'})
 

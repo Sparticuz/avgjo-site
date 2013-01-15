@@ -800,100 +800,59 @@ form.custom .custom.disabled { background-color: #ddd; }
 /* CSS for jQuery Orbit Plugin 1.4.0 Maintained for Foundation. foundation.zurb.com Free to use under the MIT license. http://www.opensource.org/licenses/mit-license.php
 */
 /* Container ---------------------- */
-div.orbit-wrapper { width: 1px; height: 1px; position: relative; }
+.orbit-wrapper { width: 1px; height: 1px; position: relative; }
 
-div.orbit { width: 1px; height: 1px; position: relative; overflow: hidden; margin-bottom: 17px; }
-
-div.orbit.with-bullets { margin-bottom: 40px; }
-
-div.orbit .orbit-slide { max-width: 100%; position: absolute; top: 0; left: 0; }
-
-div.orbit a.orbit-slide { border: none; line-height: 0; display: none; }
-
-div.orbit div.orbit-slide { width: 100%; height: 100%; }
+.orbit { width: 1px; height: 1px; position: relative; overflow: hidden; margin-bottom: 17px; }
+.orbit div {width:500px; height: 281px;}
+.orbit.with-bullets { margin-bottom: 40px; }
+.orbit .orbit-slide { max-width: 100%; position: absolute; top: 0; left: 0; }
+.orbit a.orbit-slide { border: none; line-height: 0; display: none; }
+.orbit div.orbit-slide { width: 100%; height: 100%; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 
 /* Note: If your slider only uses content or anchors, you're going to want to put the width and height declarations on the ".orbit>div" and "div.orbit>a" tags in addition to just the .orbit-wrapper */
 /* Timer ---------------------- */
-div.orbit-wrapper div.timer { width: 40px; height: 40px; overflow: hidden; position: absolute; top: 10px; right: 10px; opacity: .6; cursor: pointer; z-index: 31; }
-
-div.orbit-wrapper span.rotator { display: block; width: 40px; height: 40px; position: absolute; top: 0; left: -20px; background: url('/images/foundation/orbit/rotator-black.png?1341958611') no-repeat; z-index: 3; }
-
-div.orbit-wrapper span.mask { display: block; width: 20px; height: 40px; position: absolute; top: 0; right: 0; z-index: 2; overflow: hidden; }
-
-div.orbit-wrapper span.rotator.move { left: 0; }
-
-div.orbit-wrapper span.mask.move { width: 40px; left: 0; background: url('/images/foundation/orbit/timer-black.png?1341958611') repeat 0 0; }
-
-div.orbit-wrapper span.pause { display: block; width: 40px; height: 40px; position: absolute; top: 0; left: 0; background: url('/images/foundation/orbit/pause-black.png?1341958611') no-repeat; z-index: 4; opacity: 0; }
-
-div.orbit-wrapper span.pause.active { background: url('/images/foundation/orbit/pause-black.png?1341958611') no-repeat 0 -40px; }
-
-div.orbit-wrapper div.timer:hover span.pause, div.orbit-wrapper span.pause.active { opacity: 1; }
+.orbit-wrapper .timer { width: 40px; height: 40px; overflow: hidden; position: absolute; top: 10px; right: 15px; opacity: .6; cursor: pointer; z-index: 31; }
+.orbit-wrapper span.rotator { display: block; width: 40px; height: 40px; position: absolute; top: 0; left: -20px; background: url('../images/foundation/orbit/rotator-black.png') no-repeat; z-index: 3; }
+.orbit-wrapper span.rotator.move { left: 0; }
+.orbit-wrapper span.mask { display: block; width: 20px; height: 40px; position: absolute; top: 0; right: 0; z-index: 2; overflow: hidden; }
+.orbit-wrapper span.mask.move { width: 40px; left: 0; background: url('../images/foundation/orbit/timer-black.png') repeat 0 0; }
+.orbit-wrapper span.pause { display: block; width: 40px; height: 40px; position: absolute; top: 0; left: 0; background: url('../images/foundation/orbit/pause-black.png') no-repeat; z-index: 4; opacity: 0; }
+.orbit-wrapper span.pause.active { background: url('../images/foundation/orbit/pause-black.png') no-repeat 0 -40px; }
+.orbit-wrapper .timer:hover span.pause, .orbit-wrapper .timer:focus span.pause, .orbit-wrapper span.pause.active { opacity: 1; }
 
 /* Captions ---------------------- */
-.orbit-caption { display: none; font-family: "HelveticaNeue", "Helvetica-Neue", Helvetica, Arial, sans-serif; }
+.orbit-caption { display: none; font-family: inherit; }
 
-.orbit-wrapper .orbit-caption { background: #000; background: rgba(0, 0, 0, 0.6); z-index: 30; color: #fff; text-align: center; padding: 7px 0; font-size: 13px; font-size: 1.3rem; position: absolute; right: 0; bottom: 0; width: 100%; }
+.orbit-wrapper .orbit-caption { background: black; background: rgba(0, 0, 0, 0.6); z-index: 30; color: white; text-align: center; padding: 7px 0; font-size: 13px; position: absolute; right: 0; bottom: 0; width: 100%; }
 
 /* Directional Nav ---------------------- */
-div.orbit-wrapper div.slider-nav { display: block; }
+.orbit-wrapper .slider-nav { display: block; }
+.orbit-wrapper .slider-nav span { width: 39px; height: 50px; text-indent: -9999px; position: absolute; z-index: 30; top: 50%; margin-top: -25px; cursor: pointer; }
+.orbit-wrapper .slider-nav span.right { background: url('../images/foundation/orbit/right-arrow.png'); background-size: 100%; right: 15px; }
+.orbit-wrapper .slider-nav span.left { background: url('../images/foundation/orbit/left-arrow.png'); background-size: 100%; left: -15px; }
 
-div.orbit-wrapper div.slider-nav span { width: 39px; height: 50px; text-indent: -9999px; position: absolute; z-index: 30; top: 50%; margin-top: -25px; cursor: pointer; }
-
-div.orbit-wrapper div.slider-nav span.right { background: url('/images/foundation/orbit/right-arrow.png?1341958611'); background-size: 100%; right: 0; }
-
-div.orbit-wrapper div.slider-nav span.left { background: url('/images/foundation/orbit/left-arrow.png?1341958611'); background-size: 100%; left: 0; }
-
-.lt-ie9 div.orbit-wrapper div.slider-nav span.right { background: url('/images/foundation/orbit/right-arrow-small.png?1341958611'); }
-.lt-ie9 div.orbit-wrapper div.slider-nav span.left { background: url('/images/foundation/orbit/left-arrow-small.png?1341958611'); }
+.lt-ie9 .orbit-wrapper .slider-nav span.right { background: url('../images/foundation/orbit/right-arrow-small.png'); }
+.lt-ie9 .orbit-wrapper .slider-nav span.left { background: url('../images/foundation/orbit/left-arrow-small.png'); }
 
 /* Bullet Nav ---------------------- */
 ul.orbit-bullets { position: absolute; z-index: 30; list-style: none; bottom: -40px; left: 50%; margin-left: -50px; padding: 0; }
-
-ul.orbit-bullets li { float: left; margin-left: 5px; cursor: pointer; color: #999; text-indent: -9999px; background: url('/images/foundation/orbit/bullets.jpg?1341958611') no-repeat 4px 0; width: 13px; height: 12px; overflow: hidden; }
-
-ul.orbit-bullets li.active { color: #222; background-position: -8px 0; }
-
+ul.orbit-bullets li { float: left; margin-left: 5px; cursor: pointer; color: #999999; text-indent: -9999px; background: url('../images/foundation/orbit/bullets.jpg') no-repeat 4px 0; width: 13px; height: 12px; overflow: hidden; }
+ul.orbit-bullets li.active { color: #222222; background-position: -8px 0; }
 ul.orbit-bullets li.has-thumb { background: none; width: 100px; height: 75px; }
+ul.orbit-bullets li.active.has-thumb { background-position: 0 0; border-top: 2px solid black; }
 
-ul.orbit-bullets li.active.has-thumb { background-position: 0 0; border-top: 2px solid #000; }
+/* Orbit Slide Counter */
+.orbit-slide-counter { position: absolute; bottom: 0; z-index: 99; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px; }
 
 /* Fluid Layout ---------------------- */
-div.orbit img.fluid-placeholder { visibility: hidden; position: static; display: block; width: 100%; }
+.orbit img.fluid-placeholder { visibility: hidden; position: static; display: block; width: 100%; }
 
-div.orbit, div.orbit-wrapper { width: 100% !important; }
-
-ul.orbit-bullets { position: absolute; z-index: 30; list-style: none; bottom: -50px; left: 50%; margin-left: -50px; padding: 0; }
-
-ul.orbit-bullets li { float: left; margin-left: 5px; cursor: pointer; color: #999; text-indent: -9999px; background: url('/images/foundation/orbit/bullets.jpg?1341958611') no-repeat 4px 0; width: 13px; height: 12px; overflow: hidden; }
-
-ul.orbit-bullets li.has-thumb { background: none; width: 100px; height: 75px; }
-
-ul.orbit-bullets li.active { color: #222; background-position: -8px 0; }
-
-ul.orbit-bullets li.active.has-thumb { background-position: 0 0; border-top: 2px solid #000; }
+.orbit, .orbit-wrapper { width: 100% !important; }
 
 /* Correct timer in IE */
 .lt-ie9 .timer { display: none !important; }
 
-.lt-ie9 div.caption { background: transparent; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000); zoom: 1; }
+.lt-ie9 .orbit-caption { background: black; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000); zoom: 1; }
 
-/* CSS for jQuery Reveal Plugin Maintained for Foundation. foundation.zurb.com Free to use under the MIT license. http://www.opensource.org/licenses/mit-license.php */
-/* Reveal Modals ---------------------- */
-.reveal-modal-bg { position: fixed; height: 100%; width: 100%; background: #000; background: rgba(0, 0, 0, 0.45); z-index: 40; display: none; top: 0; left: 0; }
-
-.reveal-modal { background: white; visibility: hidden; display: none; top: 100px; left: 50%; margin-left: -260px; width: 520px; position: absolute; z-index: 41; padding: 30px; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
-.reveal-modal *:first-child { margin-top: 0; }
-.reveal-modal *:last-child { margin-bottom: 0; }
-.reveal-modal .close-reveal-modal { font-size: 22px; font-size: 2.2rem; line-height: .5; position: absolute; top: 8px; right: 11px; color: #aaa; text-shadow: 0 -1px 1px rbga(0, 0, 0, 0.6); font-weight: bold; cursor: pointer; }
-.reveal-modal.small { width: 30%; margin-left: -10%; }
-.reveal-modal.medium { width: 40%; margin-left: -20%; }
-.reveal-modal.large { width: 60%; margin-left: -30%; }
-.reveal-modal.expand { width: 90%; margin-left: -45%; }
-.reveal-modal .row { min-width: 0; }
-
-/* Mobile */
-@media only screen and (max-width: 767px) { .reveal-modal-bg { position: absolute; }
-  .reveal-modal, .reveal-modal.small, .reveal-modal.medium, .reveal-modal.large, .reveal-modal.xlarge { width: 80%; top: 15px; left: 50%; margin-left: -40%; padding: 20px; height: auto; } }
-  /* NOTES Close button entity is &#215;
- Example markup <div id="myModal" class="reveal-modal"> <h2>Awesome. I have it.</h2> <p class="lead">Your couch.  I it's mine.</p> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices aliquet placerat. Duis pulvinar orci et nisi euismod vitae tempus lorem consectetur. Duis at magna quis turpis mattis venenatis eget id diam. </p> <a class="close-reveal-modal">&#215;</a> </div> */
+@media only screen and (max-width: 767px) { .orbit.orbit-stack-on-small img.fluid-placeholder { visibility: visible; }
+  .orbit.orbit-stack-on-small .orbit-slide { position: static; margin-bottom: 10px; } }

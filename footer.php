@@ -53,6 +53,17 @@
 			</div>
 		</footer>
 	</div>
+	<script type="text/javascript">
+		$container = $('#all-posts');
+		$container.imagesLoaded(function(){
+			$container.masonry({
+				// options
+				itemSelector : '.post'
+			});
+		});
+		
+		$('#hero-stories').orbit();
+	</script>
 	<?php include (TEMPLATEPATH . '/inc/analytics.php' ); ?>
 	<?php wp_footer(); ?>
 </body>
