@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
 	/* DROPDOWN NAV ------------- */
 	$('.current-menu-item, .current-menu-parent, .current-menu-ancestor').addClass('active');
 	var topLevelLi = $('.nav-bar li');
-	topLevelLi.addClass('two columns');
+	/*topLevelLi.addClass('two columns');*/
 	topLevelLi.has('ul').addClass('has-flyout');
 	var subLevelUl = $('.nav-bar li ul');
 	subLevelUl.addClass('flyout');
@@ -37,9 +37,9 @@ jQuery(document).ready(function ($) {
 		$('.nav-bar>li.has-flyout').addClass('is-touch');
 	} else {
 		$('.nav-bar>li.has-flyout').hover(function() {
-			$(this).children('.flyout').slideDown();
+			$(this).children('.flyout').stop(true,true).slideDown();
 		}, function() {
-			$(this).children('.flyout').slideUp();
+			$(this).children('.flyout').stop(true,true).slideUp();
 		});
 	}
 
