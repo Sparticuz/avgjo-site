@@ -22,7 +22,7 @@
 	// Disable the admin bar, set to true if you want it to be visible.
 	show_admin_bar( false );
 
-	// Load jQuery from Google
+	// Load jQuery from Google instead of the wordpress install
 	if ( !is_admin() ) {
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"), false);
@@ -40,7 +40,7 @@
 
 	}
 
-	// Clean up the <head>
+	// Clean up the <head> for security
 	function removeHeadLinks() {
     	remove_action('wp_head', 'rsd_link');
     	remove_action('wp_head', 'wlwmanifest_link');

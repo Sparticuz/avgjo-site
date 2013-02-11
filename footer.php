@@ -54,15 +54,19 @@
 		</footer>
 	</div>
 	<script type="text/javascript">
+		//this code is important
+		//it waits until the #all-posts div has been fully loaded
+		//before initing the masonry plugin, let's throw the orbit in there too
 		$container = $('#all-posts');
 		$container.imagesLoaded(function(){
 			$container.masonry({
 				// options
 				itemSelector : '.post'
 			});
+			$('#hero-stories').orbit();
 		});
 		
-		$('#hero-stories').orbit();
+		
 	</script>
 	<?php include (TEMPLATEPATH . '/inc/analytics.php' ); ?>
 	<?php wp_footer(); ?>

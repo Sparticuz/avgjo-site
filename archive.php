@@ -24,7 +24,8 @@
 			<ul>	
 		<?php while (have_posts()) : the_post(); ?>
 			<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-				<div class="panel">
+				<div class="panel clearfix">
+					<?php //this is where the posts are on the category pages ?>
 					<header>
 						<h2 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 						<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>

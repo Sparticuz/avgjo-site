@@ -1,4 +1,4 @@
-<?php
+<?php //we're not using wordpress comments, we are using facebook; the code below will load the fb comments
 	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 		die ('Please do not load this page directly. Thanks!');
 

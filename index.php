@@ -16,17 +16,20 @@
 <?php get_header(); ?>
 <div id="content" class="row shadow">
 	<div class="twelve columns">
-		<!--<div style="width:500px;height:281px;">-->
+		<?php //the div below will envelop the orbit, it's used to set the max 
+		//size and to center the div ?>
 		<div style="width:500px;height:281px;margin:0 auto;">
-                <div class="row" id="hero-stories">
-			<?php include (TEMPLATEPATH . '/inc/hero.php' ); ?>
-		</div>
+			<div class="row" id="hero-stories">
+				<?php //let's load the sticky stories
+				include (TEMPLATEPATH . '/inc/hero.php' ); ?>
+			</div>
 		</div>
 		<div class="row" id="posts" style="margin-top:15px;">
 			<div class="twelve columns">
 				<ul class="block-grid mobile three-up" id="all-posts">
-				<?php //query_posts( array( 'post__not_in' => get_option( 'sticky_posts' ) ) ); ?>
-				<?php if (have_posts()) : while (have_posts()) : the_post(); if(is_sticky()) continue; ?>
+				<?php //we only want to show posts with the category of 'AverageJo' 
+				query_posts( array ( 'category_name' => 'averagejo', 'posts_per_page' => -1 ) );
+				if (have_posts()) : while (have_posts()) : the_post(); if(is_sticky()) continue; ?>
 					<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 						<div class="panel">
 							<header class="overflow">

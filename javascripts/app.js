@@ -1,12 +1,5 @@
 jQuery(document).ready(function ($) {
 
-	/* PLACEHOLDER FOR FORMS ------------- */
-	/* Remove this and jquery.placeholder.min.js if you don't need :) */
-	$('input, textarea').placeholder();
-
-	/* TOOLTIPS ------------ */
-	//$(this).tooltips();
-
 	/* DROPDOWN NAV ------------- */
 	$('.current-menu-item, .current-menu-parent, .current-menu-ancestor').addClass('active');
 	var topLevelLi = $('.nav-bar li');
@@ -42,13 +35,5 @@ jQuery(document).ready(function ($) {
 			$(this).children('.flyout').stop(true,true).slideUp();
 		});
 	}
-
-	/* DISABLED BUTTONS ------------- */
-	/* Gives elements with a class of 'disabled' a return: false; */
-	/*$('.button.disabled').on('click.fndtn', function (event) {
-		event.preventDefault();
-	});*/
-
-//	$('.block-grid.three-up>li').css({'margin-left':'1%'})
 
 });
