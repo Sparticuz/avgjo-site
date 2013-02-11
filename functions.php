@@ -28,12 +28,10 @@
 		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"), false);
 		wp_register_script('masonry', (get_stylesheet_directory_uri()."/javascripts/jquery.masonry.js"), false);
 		wp_register_script('orbit', (get_stylesheet_directory_uri()."/javascripts/jquery.orbit.js"), false);
-		wp_register_script('placeholder', (get_stylesheet_directory_uri()."/javascripts/jquery.placeholder.min.js"), false);
 		wp_register_script('modernizr', (get_stylesheet_directory_uri()."/javascripts/modernizr.foundation.js"), false);
 		wp_register_script('app', (get_stylesheet_directory_uri()."/javascripts/app.js"), false);
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('modernizr');
-		wp_enqueue_script('placeholder');
 		wp_enqueue_script('orbit');
 		wp_enqueue_script('masonry');
 		wp_enqueue_script('app');
