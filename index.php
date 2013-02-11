@@ -16,12 +16,13 @@
 <?php get_header(); ?>
 <div id="content" class="row shadow">
 	<div class="twelve columns">
-		<div style="width:500px;height:281px;">
-		<div class="row" id="hero-stories">
+		<!--<div style="width:500px;height:281px;">-->
+		<div style="width:500px;height:281px;margin:0 auto;">
+                <div class="row" id="hero-stories">
 			<?php include (TEMPLATEPATH . '/inc/hero.php' ); ?>
 		</div>
 		</div>
-		<div class="row" id="posts">
+		<div class="row" id="posts" style="margin-top:15px;">
 			<div class="twelve columns">
 				<ul class="block-grid mobile three-up" id="all-posts">
 				<?php //query_posts( array( 'post__not_in' => get_option( 'sticky_posts' ) ) ); ?>

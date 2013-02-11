@@ -28,7 +28,7 @@ a:focus { color: #EC068D; outline: none; }
 	background: none !important;
 	float:left;
 }
-li.post {list-style: none;}
+li.post {list-style: none; width:100%;}
 .archive .post {
 	margin-bottom: 10px;
 }
@@ -78,3 +78,8 @@ div.panel{background-color:#Fff5ee;border:3px solid #ec068d;}
 .overflow{overflow:hidden;}
 
 .endfooter{padding: 5px; margin-bottom: 20px; text-align: center; color: #cccccc;}
+
+div.entry div{
+    /*override for you tube*/
+    width: 100% !important;
+}
