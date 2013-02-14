@@ -47,14 +47,45 @@
 							</footer>-->
 						</div>
 					</li>
-
 					<?php endwhile; ?>
-
 					<?php else : ?>
 						<h2>Not Found</h2>
 					<?php endif; wp_reset_query(); ?>
+				<?php //Now, we can show the last post from each category
+					// cycle through categories, print 1 post for each category
+					$categories=get_categories('orderby=name&order=ASC&exclude=501');
+						foreach($categories as $category) {
+							$posts=get_posts('showposts=1&cat='. $category->term_id);
+							if ($posts) {
+								foreach($posts as $post) {
+									setup_postdata($post); ?>
+									<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+										<div class="panel">
+											<header class="overflow">
+												<h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+												<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+											</header>
+											<article class="entry overflow">
+												<div class="image"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
+												<?php the_content("Continue reading " . the_title('', '', false)); ?>
+											</article>
+											<!--<footer class="postmetadata overflow">
+												<?php the_tags('Tags: ', ', ', '<br />'); ?>
+												Posted in <?php the_category(', ') ?> |
+												<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
+											</footer>-->
+										</div>
+									</li>
+									<?php
+								} // foreach($posts
+							} // if ($posts
+						} // foreach($categories
+					?>
+				
+				
 				</ul>
-				<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
+				<?php //we don't want to include the nav on the front page
+				//include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 				<div class="clearfix"></div>
 			</div>
 		</div>

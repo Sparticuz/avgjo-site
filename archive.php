@@ -21,7 +21,7 @@
 		<?php } ?>
 
 		<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
-			<ul>	
+			<ul>
 		<?php while (have_posts()) : the_post(); ?>
 			<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 				<div class="panel clearfix">
