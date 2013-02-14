@@ -48,8 +48,6 @@
 						</div>
 					</li>
 					<?php endwhile; ?>
-					<?php else : ?>
-						<h2>Not Found</h2>
 					<?php endif; wp_reset_query(); ?>
 				<?php //Now, we can show the last post from each category
 					// cycle through categories, print 1 post for each category
