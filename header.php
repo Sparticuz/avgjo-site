@@ -67,14 +67,14 @@
 			<div class="twelve columns">
 				<?php include (TEMPLATEPATH . '/inc/menu.php' ); ?>
 				<div class="row">
-					<div class="four columns" style="text-align: center;">
+					<div class="three columns" style="text-align: center;">
 						<!--<div class="ad"><img src="http://placedog.com/g/101/101?p=<?php echo rand(); ?>"/></div>-->
 					</div>
-					<hgroup class="four columns">
+					<hgroup class="six columns">
 						<h1 style="text-align:center;"><a href="<?php echo site_url(); ?>/"><img src="<?php bloginfo('template_directory'); ?>/images/header.png" alt="<?php bloginfo('name'); ?>" /></a></h1>
 						<h2 class="subheader description" style="display:none;"><?php bloginfo('description'); ?></h2>
 					</hgroup>
-					<div class="four columns">
+					<div class="three columns">
 						<?php get_search_form(); ?>
 					</div>
 				</div>
