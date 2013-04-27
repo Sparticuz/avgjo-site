@@ -18,7 +18,7 @@
 	<div class="twelve columns">
 		<?php //the div below will envelop the orbit, it's used to set the max 
 		//size and to center the div ?>
-		<div style="width:500px;height:281px;margin:0 auto;">
+		<div style="width:700px;height:300px;margin:0 auto;">
 			<div class="row" id="hero-stories">
 				<?php //let's load the sticky stories
 				include (TEMPLATEPATH . '/inc/hero.php' ); ?>
@@ -51,7 +51,7 @@
 					<?php endif; wp_reset_query(); ?>
 				<?php //Now, we can show the last post from each category
 					// cycle through categories, print 1 post for each category
-					$categories=get_categories('orderby=name&order=ASC&exclude=501');
+					/*$categories=get_categories('orderby=name&order=ASC&exclude=501');
 						foreach($categories as $category) {
 							$posts=get_posts('showposts=1&cat='. $category->term_id);
 							if ($posts) {
@@ -77,7 +77,7 @@
 									<?php
 								} // foreach($posts
 							} // if ($posts
-						} // foreach($categories
+						} // foreach($categories*/
 					?>
 				
 				
