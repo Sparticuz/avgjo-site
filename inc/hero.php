@@ -9,10 +9,10 @@ foreach($categories as $category) {
 		foreach($posts as $post) {
 			setup_postdata($post); ?>
 			<div class="featured-hero-image" style="padding-right:0;">
-				<a href="<?php the_permalink(); ?>">
-					<?php $post_category = get_the_category(); ?>
+				<?php $post_category = get_the_category(); ?>
+				<?php $category_link = get_category_link( $post_category[0]->cat_ID ); ?>
+				<a href="<?php echo esc_url( $category_link ); ?>">
 					<img src="<?php bloginfo('template_directory'); ?>/images/categories/<?php echo $post_category[0]->cat_ID; ?>.jpg" alt="<?php echo $post_category[0]->cat_name; ?>" />
-					<h2><span><?php the_title(); ?></span></h2>
 				</a>
 			</div>
 <?php	} // foreach($posts

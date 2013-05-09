@@ -17,7 +17,7 @@
 								// this is where the html for an ad would go
 								// it would be inserted after the first paragraph
 								// of text in a single post page. ?>
-								<div class="ad" style="margin:0 auto;"><img src="http://placedog.com/g/400/100" /></div>
+								<!--<div class="ad" style="margin:0 auto;"><img src="http://placedog.com/g/400/100" /></div>-->
 							<?php }
 							echo $content[$i] . "</p>";
 						} ?>
